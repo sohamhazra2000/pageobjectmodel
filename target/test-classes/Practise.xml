@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="PractisePageTest">
+  <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.ibm.tests.PractisePageTest"/>
+    </classes>
+  </test> 
+ 
+  <test name="TestHomePage">
+   <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.ibm.tests.TestHomePage"/>
+    </classes>
+  </test> 
+  
+	<test name="TestLoginMa">
+	<parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.ibm.tests.TestLoginMa"/>
+    </classes>
+  </test>
+  
+  <test name="TestPageException">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.ibm.tests.TestPageException"/>
+    </classes>
+  </test>
+ 
+  <test name="Tabletest">
+   <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.ibm.tests.Tabletest"/>
+    </classes>
+  </test>   
+</suite> <!-- Suite -->

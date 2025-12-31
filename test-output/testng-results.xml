@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-31T17:05:42 IST" name="Suite" finished-at="2025-12-31T17:06:22 IST" duration-ms="39452">
+    <groups>
+    </groups>
+    <test started-at="2025-12-31T17:05:42 IST" name="PractisePageTest" finished-at="2025-12-31T17:05:50 IST" duration-ms="7957">
+      <class name="com.ibm.tests.PractisePageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ibm.tests.PractisePageTest@776aec5c]" started-at="2025-12-31T17:05:42 IST" name="setup" finished-at="2025-12-31T17:05:48 IST" duration-ms="6192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testNavigation()[pri:0, instance:com.ibm.tests.PractisePageTest@776aec5c]" started-at="2025-12-31T17:05:48 IST" name="testNavigation" finished-at="2025-12-31T17:05:50 IST" duration-ms="1731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigation -->
+      </class> <!-- com.ibm.tests.PractisePageTest -->
+    </test> <!-- PractisePageTest -->
+    <test started-at="2025-12-31T17:05:50 IST" name="TestHomePage" finished-at="2025-12-31T17:05:55 IST" duration-ms="5303">
+      <class name="com.ibm.tests.TestHomePage">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ibm.tests.TestHomePage@198b6731]" started-at="2025-12-31T17:05:50 IST" name="setup" finished-at="2025-12-31T17:05:55 IST" duration-ms="5168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testNameField()[pri:0, instance:com.ibm.tests.TestHomePage@198b6731]" started-at="2025-12-31T17:05:55 IST" name="testNameField" finished-at="2025-12-31T17:05:55 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNameField -->
+      </class> <!-- com.ibm.tests.TestHomePage -->
+    </test> <!-- TestHomePage -->
+    <test started-at="2025-12-31T17:05:55 IST" name="TestLoginMa" finished-at="2025-12-31T17:06:02 IST" duration-ms="6800">
+      <class name="com.ibm.tests.TestLoginMa">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ibm.tests.TestLoginMa@4d1c00d0]" started-at="2025-12-31T17:05:55 IST" name="setup" finished-at="2025-12-31T17:06:01 IST" duration-ms="5187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="TestLoginWorks()[pri:0, instance:com.ibm.tests.TestLoginMa@4d1c00d0]" started-at="2025-12-31T17:06:01 IST" name="TestLoginWorks" finished-at="2025-12-31T17:06:02 IST" duration-ms="1575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWorks -->
+        <test-method signature="TestLoginWorks2()[pri:0, instance:com.ibm.tests.TestLoginMa@4d1c00d0]" started-at="2025-12-31T17:06:02 IST" name="TestLoginWorks2" finished-at="2025-12-31T17:06:02 IST" duration-ms="17" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: MicrosoftEdge=143.0.3650.96)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9904185b9580b14c38091aa1f119f52f, sendKeysToElement {value=[Ljava.lang.CharSequence;@70ab80e3, id=f.C96648C6B1A2ADD785E42C9A9E105EB7.d.F4F16435268F6D34B83FD9561F77D0AE.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 11056, ms:edgeOptions: {debuggerAddress: localhost:58432}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\SOHAMH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58432/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (9904185b9580b14c38091aa1f119f52f)] -> id: username]
+Session ID: 9904185b9580b14c38091aa1f119f52f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=143.0.3650.96)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9904185b9580b14c38091aa1f119f52f, sendKeysToElement {value=[Ljava.lang.CharSequence;@70ab80e3, id=f.C96648C6B1A2ADD785E42C9A9E105EB7.d.F4F16435268F6D34B83FD9561F77D0AE.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 11056, ms:edgeOptions: {debuggerAddress: localhost:58432}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\SOHAMH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58432/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (9904185b9580b14c38091aa1f119f52f)] -> id: username]
+Session ID: 9904185b9580b14c38091aa1f119f52f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at com.ibm.pages.TestLogin.enterLofPas2(TestLogin.java:37)
+at com.ibm.tests.TestLoginMa.TestLoginWorks2(TestLoginMa.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWorks2 -->
+      </class> <!-- com.ibm.tests.TestLoginMa -->
+    </test> <!-- TestLoginMa -->
+    <test started-at="2025-12-31T17:06:02 IST" name="TestPageException" finished-at="2025-12-31T17:06:14 IST" duration-ms="11612">
+      <class name="com.ibm.tests.TestPageException">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ibm.tests.TestPageException@2a5c8d3f]" started-at="2025-12-31T17:06:02 IST" name="setup" finished-at="2025-12-31T17:06:08 IST" duration-ms="5543" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testfirstfield()[pri:0, instance:com.ibm.tests.TestPageException@2a5c8d3f]" started-at="2025-12-31T17:06:08 IST" name="testfirstfield" finished-at="2025-12-31T17:06:08 IST" duration-ms="468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfirstfield -->
+        <test-method signature="testfield2()[pri:0, instance:com.ibm.tests.TestPageException@2a5c8d3f]" started-at="2025-12-31T17:06:08 IST" name="testfield2" finished-at="2025-12-31T17:06:14 IST" depends-on-methods="com.ibm.tests.TestPageException.testfirstfield" duration-ms="5588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfield2 -->
+      </class> <!-- com.ibm.tests.TestPageException -->
+    </test> <!-- TestPageException -->
+    <test started-at="2025-12-31T17:06:14 IST" name="Tabletest" finished-at="2025-12-31T17:06:22 IST" duration-ms="7607">
+      <class name="com.ibm.tests.Tabletest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ibm.tests.Tabletest@247bddad]" started-at="2025-12-31T17:06:14 IST" name="setup" finished-at="2025-12-31T17:06:19 IST" duration-ms="5285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tabletest1()[pri:0, instance:com.ibm.tests.Tabletest@247bddad]" started-at="2025-12-31T17:06:19 IST" name="tabletest1" finished-at="2025-12-31T17:06:20 IST" duration-ms="1274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tabletest1 -->
+        <test-method signature="tabletest2()[pri:0, instance:com.ibm.tests.Tabletest@247bddad]" started-at="2025-12-31T17:06:20 IST" name="tabletest2" finished-at="2025-12-31T17:06:21 IST" duration-ms="1040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tabletest2 -->
+      </class> <!-- com.ibm.tests.Tabletest -->
+    </test> <!-- Tabletest -->
+  </suite> <!-- Suite -->
+</testng-results>
