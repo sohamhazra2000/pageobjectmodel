@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                    <span class="method-stats">7 methods,  2 skipped,  5 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ibm.tests.TestLoginMa" class="method navigator-link" hash-for-method="TestLoginWorks2">TestLoginWorks2</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ibm.tests.TestPageException" class="method navigator-link" hash-for-method="testfield2">testfield2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.ibm.tests.TestPageException" class="method navigator-link" hash-for-method="testfirstfield">testfirstfield</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -140,16 +145,6 @@
                         <a href="#" panel-name="suite-Suite" title="com.ibm.tests.PractisePageTest" class="method navigator-link" hash-for-method="testNavigation">testNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ibm.tests.TestPageException" class="method navigator-link" hash-for-method="testfield2">testfield2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ibm.tests.TestPageException" class="method navigator-link" hash-for-method="testfirstfield">testfirstfield</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -162,27 +157,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.ibm.tests.TestLoginMa</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.ibm.tests.TestPageException</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestLoginWorks2">
-                  </a> <!-- TestLoginWorks2 -->
-                  <span class="method-name">TestLoginWorks2</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: MicrosoftEdge=143.0.3650.96)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+                  <a name="testfield2">
+                  </a> <!-- testfield2 -->
+                  <span class="method-name">testfield2</span>
+                  <div class="stack-trace">java.lang.Throwable: Method com.ibm.tests.TestPageException.testfield2() on instance com.ibm.tests.TestPageException@1df98368 depends on not successfully finished methods 
+[com.ibm.tests.TestPageException.testfirstfield() on instance com.ibm.tests.TestPageException@1df98368]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testfirstfield">
+                  </a> <!-- testfirstfield -->
+                  <span class="method-name">testfirstfield</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [9904185b9580b14c38091aa1f119f52f, sendKeysToElement {value=[Ljava.lang.CharSequence;@70ab80e3, id=f.C96648C6B1A2ADD785E42C9A9E105EB7.d.F4F16435268F6D34B83FD9561F77D0AE.e.22}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 11056, ms:edgeOptions: {debuggerAddress: localhost:58432}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\SOHAMH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58432/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (9904185b9580b14c38091aa1f119f52f)] -&gt; id: username]
-Session ID: 9904185b9580b14c38091aa1f119f52f
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [06a56a23-3ada-4e9a-957b-4d26ec9f70ce, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 28476, moz:profile: C:\Users\SOHAMH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 06a56a23-3ada-4e9a-957b-4d26ec9f70ce
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -190,17 +194,33 @@ Session ID: 9904185b9580b14c38091aa1f119f52f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at com.ibm.pages.TestLogin.enterLofPas2(TestLogin.java:37)
-	at com.ibm.tests.TestLoginMa.TestLoginWorks2(TestLoginMa.java:38)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1098)
+	at com.ibm.pages.TestPageexceptions.&lt;init&gt;(TestPageexceptions.java:30)
+	at com.ibm.tests.TestPageException.setup(TestPageException.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames
+... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ibm.tests.PractisePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavigation">
+                  </a> <!-- testNavigation -->
+                  <span class="method-name">testNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -226,58 +246,6 @@ Session ID: 9904185b9580b14c38091aa1f119f52f
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ibm.tests.TestHomePage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testNameField">
-                  </a> <!-- testNameField -->
-                  <span class="method-name">testNameField</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.ibm.tests.TestPageException</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testfield2">
-                  </a> <!-- testfield2 -->
-                  <span class="method-name">testfield2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testfirstfield">
-                  </a> <!-- testfirstfield -->
-                  <span class="method-name">testfirstfield</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.ibm.tests.PractisePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testNavigation">
-                  </a> <!-- testNavigation -->
-                  <span class="method-name">testNavigation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.ibm.tests.TestLoginMa</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -286,6 +254,21 @@ Session ID: 9904185b9580b14c38091aa1f119f52f
                   <a name="TestLoginWorks">
                   </a> <!-- TestLoginWorks -->
                   <span class="method-name">TestLoginWorks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ibm.tests.TestHomePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNameField">
+                  </a> <!-- testNameField -->
+                  <span class="method-name">testNameField</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -379,44 +362,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testfield2')
-data.setCell(0, 2, 'com.ibm.tests.TestPageException')
-data.setCell(0, 3, 5588);
+data.setCell(0, 1, 'tabletest1')
+data.setCell(0, 2, 'com.ibm.tests.Tabletest')
+data.setCell(0, 3, 10982);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testNavigation')
 data.setCell(1, 2, 'com.ibm.tests.PractisePageTest')
-data.setCell(1, 3, 1731);
+data.setCell(1, 3, 3322);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TestLoginWorks')
-data.setCell(2, 2, 'com.ibm.tests.TestLoginMa')
-data.setCell(2, 3, 1575);
+data.setCell(2, 1, 'tabletest2')
+data.setCell(2, 2, 'com.ibm.tests.Tabletest')
+data.setCell(2, 3, 1678);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'tabletest1')
-data.setCell(3, 2, 'com.ibm.tests.Tabletest')
-data.setCell(3, 3, 1274);
+data.setCell(3, 1, 'TestLoginWorks')
+data.setCell(3, 2, 'com.ibm.tests.TestLoginMa')
+data.setCell(3, 3, 1301);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'tabletest2')
-data.setCell(4, 2, 'com.ibm.tests.Tabletest')
-data.setCell(4, 3, 1040);
+data.setCell(4, 1, 'testNameField')
+data.setCell(4, 2, 'com.ibm.tests.TestHomePage')
+data.setCell(4, 3, 318);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testfirstfield')
+data.setCell(5, 1, 'testfield2')
 data.setCell(5, 2, 'com.ibm.tests.TestPageException')
-data.setCell(5, 3, 468);
+data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testNameField')
-data.setCell(6, 2, 'com.ibm.tests.TestHomePage')
-data.setCell(6, 3, 131);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TestLoginWorks2')
-data.setCell(7, 2, 'com.ibm.tests.TestLoginMa')
-data.setCell(7, 3, 17);
+data.setCell(6, 1, 'testfirstfield')
+data.setCell(6, 2, 'com.ibm.tests.TestPageException')
+data.setCell(6, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -449,65 +428,53 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testNavigation</span>
-                <span class="method-start">6197 ms</span>
+                <span class="method-start">5896 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ibm.tests.TestHomePage</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">8064 ms</span>
+                <span class="method-start">9444 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testNameField</span>
-                <span class="method-start">13232 ms</span>
+                <span class="method-start">13198 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ibm.tests.TestLoginMa</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">13378 ms</span>
+                <span class="method-start">13527 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TestLoginWorks</span>
-                <span class="method-start">18565 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TestLoginWorks2</span>
-                <span class="method-start">20147 ms</span>
+                <span class="method-start">17198 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ibm.tests.TestPageException</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup(firefox)</span>
-                <span class="method-start">20207 ms</span>
+                <span class="method-start">18524 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">testfirstfield</span>
-                <span class="method-start">25750 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testfield2</span>
-                <span class="method-start">26222 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ibm.tests.Tabletest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(firefox)</span>
-                <span class="method-start">31825 ms</span>
+                <span class="method-start">26974 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">tabletest1</span>
-                <span class="method-start">37111 ms</span>
+                <span class="method-start">35436 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">tabletest2</span>
-                <span class="method-start">38389 ms</span>
+                <span class="method-start">46423 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

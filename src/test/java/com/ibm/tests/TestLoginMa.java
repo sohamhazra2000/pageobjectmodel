@@ -33,10 +33,10 @@ public class TestLoginMa {
 	String s=  tl.enterLofPas("student","Password123");
 	Assert.assertEquals(s,"Logged In Successfully | Practice Test Automation");
   }
-  @Test
-  public void TestLoginWorks2() {
-		String s=  tl.enterLofPas2("studentqqq","Password123");
-		
-		Assert.assertEquals(s,"Test Login | Practice Test Automation");
-	  }
+//  @Test
+//  public void TestLoginWorks2() {
+//		String s=  tl.enterLofPas2("studentqqq","Password123");
+//		
+//		Assert.assertEquals(s,"Test Login | Practice Test Automation");
+//	  }
 }

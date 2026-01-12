@@ -6,13 +6,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.FindBy;
 
 //www.practicetestautomatiom.com/practise
 public class PracticePage {
 	
 	//create variables for every web element
+	@FindBy(linkText="Test Login Page")
 	WebElement testLoginPages;
+	@FindBy(linkText="Test Exceptions")
 	WebElement TestExceptions;
+	@FindBy(linkText="Test Table")
 	WebElement TestTable;
 	WebDriver driver;
 	
@@ -23,7 +27,7 @@ public class PracticePage {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		testLoginPages=driver.findElement(By.linkText("Test Login Page"));
-		TestExceptions=driver.findElement(By.linkText("Test Exceptions"));
+	  TestExceptions=driver.findElement(By.linkText("Test Exceptions"));
 		TestTable=driver.findElement(By.linkText("Test Table"));
 	}
 	

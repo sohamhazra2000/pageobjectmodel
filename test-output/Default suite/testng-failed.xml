@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ibm.tests.Tabletest">
+      <class name="com.ibm.tests.TestLoginMa">
         <methods>
+          <include name="TestLoginWorks2"/>
           <include name="setup"/>
-          <include name="tabletest2"/>
+          <include name="TestLoginWorks"/>
         </methods>
-      </class> <!-- com.ibm.tests.Tabletest -->
+      </class> <!-- com.ibm.tests.TestLoginMa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

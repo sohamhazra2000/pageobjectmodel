@@ -4,10 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class HomePage {
 	WebDriver driver;
+	@FindBy(id="form_first_name_7")
 	WebElement Nameform;
+	@FindBy(how=How.XPATH,using ="//*[@id=\\\"loop-container\\\"]/div/article/div[2]/p[9]")
 	WebElement Txt;
 	
 	public HomePage(WebDriver d) {

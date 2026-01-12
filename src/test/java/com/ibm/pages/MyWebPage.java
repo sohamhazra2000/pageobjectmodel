@@ -3,11 +3,20 @@ package com.ibm.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class MyWebPage {
 WebDriver driver;
+
+@FindBy(how=How.NAME,using="un")
+@CacheLookup
 WebElement user;
+@FindBy(name="pw")
 WebElement pw;
+@FindBy(how=How.NAME,using="login")
 WebElement LoginBtn;
 
 public MyWebPage(WebDriver d) {
@@ -15,9 +24,10 @@ public MyWebPage(WebDriver d) {
 	driver.manage().window().maximize();
 	driver.get("file:///C:/Users/SohamHazra/eclipse-workspace/demopageobjectmodel/MyWebApp/index.html");
 	driver.switchTo().alert().accept();
-	user=driver.findElement(By.name("un"));
-	pw= driver.findElement(By.id("sm"));
-	LoginBtn=driver.findElement(By.name("login"));
+//	user=driver.findElement(By.name("un"));
+//	pw= driver.findElement(By.id("sm"));
+//	LoginBtn=driver.findElement(By.name("login"));
+	PageFactory.initElements(d,this);
 }
 
 public void typeUsername(String t) {

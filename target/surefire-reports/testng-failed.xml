@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.ibm.tests.TestHomePage">
+        <methods>
+          <include name="setup"/>
+          <include name="testNameField"/>
+        </methods>
+      </class> <!-- com.ibm.tests.TestHomePage -->
+      <class name="com.ibm.tests.TestPageException">
+        <methods>
+          <include name="setup"/>
+          <include name="testfirstfield"/>
+          <include name="testfield2"/>
+        </methods>
+      </class> <!-- com.ibm.tests.TestPageException -->
+      <class name="com.ibm.tests.PractisePageTest">
+        <methods>
+          <include name="testNavigation"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ibm.tests.PractisePageTest -->
+      <class name="com.ibm.tests.TestLoginMa">
+        <methods>
+          <include name="TestLoginWorks2"/>
+          <include name="setup"/>
+          <include name="TestLoginWorks"/>
+        </methods>
+      </class> <!-- com.ibm.tests.TestLoginMa -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
